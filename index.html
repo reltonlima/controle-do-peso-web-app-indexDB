@@ -1,4 +1,3 @@
-
 <!-- 
     Projeto: Dashboard do Peso
     Autor: Relton Lima
@@ -18,7 +17,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Dashboard do Peso</h1>
+        <h1>Acompanhe seu Peso</h1>
         <div id="statusDisplay" class="status-message" style="display:none;"></div>
 
         <div class="input-section">
@@ -26,10 +25,15 @@
             <label for="entryDate">Selecione uma data:</label>
             <input type="date" id="entryDate">
 
-            <label for="weight">Peso (kg):</label>
-            <input type="number" id="weight" step="0.1" placeholder="e.g., 70.5">
+            <label for="weight">Informe seu Peso (kg):</label>
+            <input type="number" id="weight" step="0.1" placeholder="Ex: 70.5">
 
             <button id="addEntryBtn">Adicionar registro de peso</button>
+        </div>
+        
+        <div class="chart-container">
+            <h2>Histórico de Peso</h2>
+            <canvas id="weightChart"></canvas>
         </div>
 
         <div class="controls-section db-controls">
@@ -45,10 +49,6 @@
             </p>
         </div>
 
-        <div class="chart-container">
-            <h2>Histórico de Peso</h2>
-            <canvas id="weightChart"></canvas>
-        </div>
     </div>
 
     <script src="./js/main.js"></script>

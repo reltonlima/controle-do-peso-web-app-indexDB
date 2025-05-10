@@ -122,7 +122,7 @@ let db; // sql.js database instance
                 if (existingDbArray) {
                     db = new SQL.Database(existingDbArray);
                     console.log("Database loaded from IndexedDB.");
-                    showStatus("Previous data loaded successfully.");
+                    showStatus(getTranslatedString("statusDataLoaded"));
                 } else {
                     db = new SQL.Database();
                     db.run("CREATE TABLE IF NOT EXISTS weight_entries (id INTEGER PRIMARY KEY AUTOINCREMENT, entry_date TEXT UNIQUE, weight REAL);");
