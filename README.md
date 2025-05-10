@@ -50,16 +50,16 @@ Este é um aplicativo web para registrar e acompanhar o histórico de peso corpo
    - Para adicionar novos idiomas, crie um arquivo JSON na pasta `lang` com as traduções.
 
 ## Estrutura do Projeto
-controle-do-peso-web-app-indexDB/ 
-├── index.html # Página principal do aplicativo 
-├── css/ 
-│ └── estilo.css # Estilos do aplicativo 
-├── js/ │ 
-└── main.js # Lógica principal do aplicativo 
-├── lang/ 
-│ ├── pt-BR.json # Traduções em português 
-│ └── en.json # Traduções em inglês 
-├── README.md # Documentação do projeto
+controle-do-peso-web-app-indexDB/  
+├── index.html # Página principal do aplicativo  
+├── css/  
+│ └── estilo.css # Estilos do aplicativo  
+├── js/ │  
+└── main.js # Lógica principal do aplicativo  
+├── lang/  
+│ ├── pt-BR.json # Traduções em português  
+│ └── en.json # Traduções em inglês  
+├── README.md # Documentação do projeto  
 
 ## Personalização
 
