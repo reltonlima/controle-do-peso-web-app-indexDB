@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard do Peso</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard do Peso</h1>
+        <div id="statusDisplay" class="status-message" style="display:none;"></div>
+
+        <div class="input-section">
+            <h2>Registrar Peso</h2>
+            <label for="entryDate">Selecione uma data:</label>
+            <input type="date" id="entryDate">
+
+            <label for="weight">Peso (kg):</label>
+            <input type="number" id="weight" step="0.1" placeholder="e.g., 70.5">
+
+            <button id="addEntryBtn">Adicionar registro de peso</button>
+        </div>
+
+        <div class="controls-section db-controls">
+            <h2>Banco de Dados</h2>
+            <button id="exportDbBtn">Exportar DB</button>
+            <label for="importDbInput">Importar DB</label>
+            <input type="file" id="importDbInput" accept=".sqlite,.db">
+            <p style="font-size: 0.9em; color: #666;">
+                Utilize a <b>exportação</b> ou <b>importação</b> para fazer backup ou transferir seus dados. <br />
+                O arquivo do banco de dados é salvo no formato SQLite. <br />
+                <b>Nota:</b> O tamanho máximo do arquivo é de 5MB.  <br />
+                Os dados são salvos automaticamente neste navegador.
+            </p>
+        </div>
+
+        <div class="chart-container">
+            <h2>Histórico de Peso</h2>
+            <canvas id="weightChart"></canvas>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+        
+    </script>
+</body>
+</html>
