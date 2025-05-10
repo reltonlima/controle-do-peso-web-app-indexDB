@@ -169,11 +169,6 @@ let db; // sql.js database instance
             }
         }
 
-        function formatDateToBrazilian(dateString) {
-            const [year, month, day] = dateString.split('-');
-            return `${day}/${month}/${year}`;
-        }
-
         async function loadDataAndRenderChart() {
             if (!db) return;
             try {
@@ -183,7 +178,7 @@ let db; // sql.js database instance
                     return;
                 }
                 const data = results[0].values;
-                const labels = data.map(row => formatDateToBrazilian(row[0])); // Format dates
+                const labels = data.map(row => row[0]);
                 const weights = data.map(row => row[1]);
                 renderChart(labels, weights);
             } catch (err) {
